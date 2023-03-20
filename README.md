@@ -1,7 +1,7 @@
 Blood Oath Lab
 ==============
 
-In this project, we will be practicing object relationships in Ruby, with a particular emphasis on the `has_many` `through` relationship (aka: many-to-many). Please read the whole README before writing any code!
+In this project, we will be practicing object relationships in Python, with a particular emphasis on the `has many` `through` relationship (aka: many-to-many). Please read the whole README before writing any code!
 
 ## Introduction
 
@@ -11,19 +11,13 @@ You've been approached by your local cult leaders to build out a foundation for 
 
 ## Setup (Code Overview)
 
-Before you begin, first run the following command in your terminal to install the dependencies required for this lab:
+You can now view all of your Python files for your models in the `lib` folder. They will be automagically available for you so long as you use the `python debug.py` file to test your code.
 
-```sh
-bundle install
-```
-
-You can now add all of your Ruby files for your models in the `app/models` folder. You **do not** need to require them. They will be automagically require for you so long as you use the `tools/console.rb` file to run your code.
-
-Through this file, we've provided to you a console that you can use to test your code. To enter a console session, run `ruby tools/console.rb` from the command line. You'll be able to test out the methods that you write here. Take a look at that file to see how you can pre-define variables and create object instances, rather than manually doing it in every single console session.
+Through this file, we've provided to you a console that you can use to test your code. To enter a console session, run `python debug.py` from the command line. You'll be able to test out the methods that you write there. Take a look at that file to see how you can pre-define variables and create object instances, rather than manually doing it in every single console session.
 
 ## Your Job
 
-Your goal is to build out all of the methods listed in the deliverables. Do your best to follow Ruby best practices. For example, use higher-level array methods such as `map`, `select`, and `find` when appropriate in place of `each`.
+Your goal is to build out all of the functionality listed in the deliverables. 
 
 ---
 
@@ -49,6 +43,10 @@ Questions you should ask yourself:
 * Should I write any other methods?
 * Am I following _Single Source of Truth_?
 
+### A note about notation
+When you see a '#', this means the functionality will be related to the instance, a '.', the class. 
+
+
 **`Cult`**
 
 * `Cult#name`
@@ -56,45 +54,45 @@ Questions you should ask yourself:
 * `Cult#location`
   * returns a `String` that is the city where the cult is located
 * `Cult#founding_year`
-  * returns a `Fixnum` that is the year the cult was founded
+  * returns a `Integer` that is the year the cult was founded
 * `Cult#slogan`
   * returns a `String` that is this cult's slogan
 * `Cult#recruit_follower`
   * takes in an argument of a `Follower` instance and adds them to this cult's list of followers
 * `Cult#cult_population`
-  * returns a `Fixnum` that is the number of followers in this cult
+  * returns a `Integer` that is the number of followers in this cult
 * `Cult.all`
-  * returns an `Array` of all the cults
+  * returns an `List` of all the cults
 * `Cult.find_by_name`
   * takes a `String` argument that is a name and returns a `Cult` instance whose name matches that argument
 * `Cult.find_by_location`
-  * takes a `String` argument that is a location and returns an `Array` of cults that are in that location
+  * takes a `String` argument that is a location and returns an `List` of cults that are in that location
 * `Cult.find_by_founding_year`
-  * takes a `Fixnum` argument that is a year and returns all of the cults founded in that year
+  * takes a `Integer` argument that is a year and returns a list of all the cults founded in that year
 
 **`Follower`**
 
 * `Follower#name`
   * returns a `String` that is the follower's name
 * `Follower#age`
-  * returns a `Fixnum` that is the age of the follower
+  * returns a `Integer` that is the age of the follower
 * `Follower#life_motto`
   * returns a `String` that is the follower's life motto
 * `Follower#cults`
-  * returns an `Array` of this follower's cults
+  * returns an `List` of this follower's cults
 * `Follower#join_cult`
   * takes in an argument of a `Cult` instance and adds this follower to the cult's list of followers
 * `Follower.all`
-  * returns an `Array` of all the followers
+  * returns an `List` of all the followers
 * `Follower.of_a_certain_age`
-  * takes a `Fixnum` argument that is an age and returns an `Array` of followers who are the given age or older
+  * takes a `Integer` argument that is an age and returns an `List` of followers who are the given age or older
 
 **`BloodOath`**
 
 * `BloodOath#initiation_date`
   * returns a `String` that is the initiation date of this blood oath in the format _YYYY-MM-DD_.
 * `BloodOath.all`
-  * returns an `Array` of all the blood oaths
+  * returns an `List` of all the blood oaths
 
 ---
 
@@ -122,7 +120,7 @@ Now we want to build out some useful features so `Cult`s and `Follower`s and get
 * `Follower.most_active`
   * returns the `Follower` instance who has joined the most cults
 * `Follower.top_ten`
-  * returns an `Array` of followers; they are the ten most active followers
+  * returns an `List` of followers; they are the ten most active followers
 
 **`BloodOath`**
 
@@ -138,12 +136,12 @@ Our platform is done! Let's commit our code!
 Now one highly requested feature from `Follower`s using your app that you plan to paywall ($$$) is to see your fellow cult members. See if you can implement this method.
 
 * `Follower#fellow_cult_members`
-  * returns a unique `Array` of followers who are in the same cults as you
+  * returns a unique `List` of followers who are in the same cults as you
 
 A highly requested feature from `Cult`s using your app that you plan to paywall ($$$) is to restrict ages for recruits. See if you can implement this functionality.
 
 * `Cult#minimum_age`
-  * returns a `Fixnum` that is the minimum age required for followers joining this cult
+  * returns a `Integer` that is the minimum age required for followers joining this cult
 * `Cult#recruit_follower`
   * takes in an argument of a `Follower` instance and adds them to this cult's list of followers
   * NOW this is changed such that if the given `Follower` instance is not of age:
