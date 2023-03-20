@@ -13,11 +13,8 @@ You've been approached by your local cult leaders to build out a foundation for 
 
 You can now view all of your Python files for your models in the `lib` folder. They will be automagically available for you so long as you use the `python debug.py` file to test your code.
 
-Through this file, we've provided to you a console that you can use to test your code. To enter a console session, run `python debug.py` from the command line. You'll be able to test out the methods that you write there. Take a look at that file to see how you can pre-define variables and create object instances, rather than manually doing it in every single console session.
+Through this file, we've provided to you a console that you can use to test your code. To enter a console session, run `python debug.py` from the command line. You'll be able to test out the functionality that you write there. Take a look at that file to see how you can pre-define variables and create object instances, rather than manually doing it in every single console session.
 
-## Your Job
-
-Your goal is to build out all of the functionality listed in the deliverables. 
 
 ---
 
@@ -33,7 +30,7 @@ First step is to model the domain you are building out. As a non-discriminatory 
 
 ---
 
-### Basic Class Attributes and Methods
+### Basic Class Attributes, Properties, and Methods
 
 With your domain modeled, you now need to build out some basic functionality so both `Cult`s and `Follower`s can use your platform to make `BloodOath`s. A social network of cults if you will. So general searching type functionality.
 
