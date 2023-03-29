@@ -106,7 +106,7 @@ Now we want to build out some useful features so `Cult`s and `Follower`s and get
 * `Cult#my_followers_mottos`
   * prints out all of the mottos for this cult's followers
 * `Cult.least_popular`
-  * returns the `Cult` instance who has the least number of followers :(
+  * returns the `Cult` instance who has the least number of followers :
 * `Cult.most_common_location`
   * returns a `String` that is the location with the most cults
 
